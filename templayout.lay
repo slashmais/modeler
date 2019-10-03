@@ -1,0 +1,106 @@
+LAYOUT(metadlg, 412, 312)
+	ITEM(Label, lblName, SetLabel(t_("Name:")).LeftPosZ(4, 40).TopPosZ(8, 19))
+	ITEM(EditString, dv___1, HSizePosZ(44, 4).TopPosZ(8, 19))
+	ITEM(Label, lblNote, SetLabel(t_("Notes")).LeftPosZ(4, 44).TopPosZ(32, 19))
+	ITEM(DocEdit, dv___3, HSizePosZ(4, 4).VSizePosZ(52, 44))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).RightPosZ(84, 60).BottomPosZ(12, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(12, 60).BottomPosZ(12, 20))
+	ITEM(Switch, dv___6, SetLabel(t_("Normal\nImportant\nUrgent")).LeftPosZ(12, 224).TopPosZ(276, 16))
+END_LAYOUT
+
+LAYOUT(solvlay, 584, 456)
+	ITEM(ArrayCtrl, acProjects, HSizePosZ(4, 4).VSizePosZ(4, 4))
+END_LAYOUT
+
+LAYOUT(modelay, 780, 516)
+	ITEM(Label, dv___0, SetLabel(t_("Project:")).LeftPosZ(8, 48).TopPosZ(8, 19))
+	ITEM(DropList, cbRD, LeftPosZ(60, 292).TopPosZ(8, 20))
+	ITEM(LabelBox, TabPlaceholder, HSizePosZ(8, 8).VSizePosZ(40, 8))
+	ITEM(StaticText, dv___3, SetText(t_("Statistics (activity, resources, times)")).LeftPosZ(572, 192).TopPosZ(228, 20))
+	ITEM(StaticText, dv___4, SetText(t_("Journal (notes, todos, info //(flagged) sections, editor)")).LeftPosZ(12, 752).TopPosZ(60, 20))
+	ITEM(StaticText, dv___5, SetText(t_("Producer (implementation spec of Design, for tech/DBMS, doc/training)")).LeftPosZ(412, 352).TopPosZ(180, 20))
+	ITEM(Label, dv___6, SetLabel(t_("Library")).LeftPosZ(492, 80).TopPosZ(36, 19))
+	ITEM(StaticText, dv___7, SetText(t_("Library (re-use, share, generic, ref's, how-tos, ...)")).LeftPosZ(492, 272).TopPosZ(204, 20))
+	ITEM(StaticText, dv___8, SetText(t_("Designer (compose from Analyzer: flows, erd's, rules, docs, tests, algo's)")).LeftPosZ(332, 432).TopPosZ(156, 20))
+	ITEM(Label, dv___9, SetLabel(t_("Producer")).LeftPosZ(412, 80).TopPosZ(36, 19))
+	ITEM(StaticText, dv___10, SetText(t_("Analyzer (data from Researcher, decomp, deps, needs, procs, roles, rules)")).LeftPosZ(252, 512).TopPosZ(132, 20))
+	ITEM(Label, dv___11, SetLabel(t_("Collector")).LeftPosZ(92, 80).TopPosZ(36, 19))
+	ITEM(Label, dv___12, SetLabel(t_("Analyzer")).LeftPosZ(252, 80).TopPosZ(36, 19))
+	ITEM(Label, dv___13, SetLabel(t_("Designer")).LeftPosZ(332, 80).TopPosZ(36, 19))
+	ITEM(StaticText, dv___14, SetText(t_("Collector (info/refs, organize/group/.., issues, ideas, etc)")).LeftPosZ(92, 672).TopPosZ(84, 20))
+	ITEM(StaticText, dv___15, SetText(t_("tabs display lists:\nN: note-topics\nR: specific parts of Project\nA: active decompositions\nD: modules and db's\nP: per target-tech: ==D \nS: (todo)\nL: topics + search")).LeftPosZ(60, 144).TopPosZ(224, 164))
+	ITEM(Label, dv___16, SetLabel(t_("Journal")).LeftPosZ(12, 80).TopPosZ(36, 19))
+	ITEM(Label, dv___17, SetLabel(t_("Statistics")).LeftPosZ(572, 80).TopPosZ(36, 19))
+	ITEM(Label, dv___18, SetLabel(t_("Scoper")).LeftPosZ(172, 80).TopPosZ(36, 19))
+	ITEM(StaticText, dv___19, SetText(t_("Scoper (set goal(s) from Collector-data, phase/feature/resource/cost/..)")).LeftPosZ(172, 592).TopPosZ(108, 20))
+	ITEM(Button, btnE, SetLabel(t_("..")).SetFont(StdFont().Bold()).LeftPosZ(356, 20).TopPosZ(8, 20))
+	ITEM(Button, btnA, SetLabel(t_("+")).SetFont(StdFont().Bold()).LeftPosZ(380, 20).TopPosZ(8, 20))
+	ITEM(Button, btnD, SetLabel(t_("-")).SetFont(StdFont().Bold()).LeftPosZ(404, 20).TopPosZ(8, 20))
+	ITEM(LabelBox, PAN, HSizePosZ(8, 8).TopPosZ(4, 24))
+END_LAYOUT
+
+LAYOUT(jourlay, 636, 460)
+	ITEM(ArrayCtrl, arItem, Inserting(true).Appending(true).Removing(true).AutoHideSb(true).LeftPosZ(4, 256).VSizePosZ(4, 4))
+	ITEM(UWordWidget, UWW, HSizePosZ(264, 4).VSizePosZ(4, 8))
+END_LAYOUT
+
+LAYOUT(projectlay, 380, 284)
+	ITEM(Label, lbln, SetLabel(t_("Project:")).SetAlign(ALIGN_RIGHT).LeftPosZ(4, 60).TopPosZ(4, 19))
+	ITEM(EditString, ebN, LeftPosZ(68, 240).TopPosZ(4, 19))
+	ITEM(Label, lblw, SetLabel(t_("Workspace:")).SetAlign(ALIGN_RIGHT).LeftPosZ(4, 60).TopPosZ(28, 19))
+	ITEM(EditString, ebW, LeftPosZ(68, 280).TopPosZ(28, 19))
+	ITEM(Button, btnWS, SetLabel(t_("..")).SetFont(StdFont().Bold()).LeftPosZ(352, 20).TopPosZ(28, 20))
+	ITEM(Label, lbld, SetLabel(t_("Description")).LeftPosZ(4, 68).TopPosZ(52, 19))
+	ITEM(DocEdit, deD, HSizePosZ(4, 4).VSizePosZ(72, 48))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).RightPosZ(84, 60).BottomPosZ(12, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(16, 60).BottomPosZ(12, 20))
+END_LAYOUT
+
+LAYOUT(jitemlay, 276, 136)
+	ITEM(Label, lblName, SetLabel(t_("Title:")).LeftPosZ(4, 32).TopPosZ(8, 19))
+	ITEM(EditString, ebTitle, HSizePosZ(40, 8).TopPosZ(8, 19))
+	ITEM(Switch, radFlag, SetLabel(t_("Note\nInfo\nTo do\nAttention\nIssue\nHistory")).LeftPosZ(40, 92).TopPosZ(36, 92))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).RightPosZ(40, 60).TopPosZ(52, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(40, 60).TopPosZ(88, 20))
+END_LAYOUT
+
+LAYOUT(seedtoolay, 664, 188)
+	ITEM(Label, LEFTLABEL, LeftPosZ(0, 220).TopPosZ(0, 28))
+	ITEM(Label, lblPage, SetLabel(t_("Page:")).LeftPosZ(4, 32).TopPosZ(4, 19))
+	ITEM(DropList, cbPages, LeftPosZ(36, 180).TopPosZ(4, 19))
+	ITEM(Label, SECONDLABEL, LeftPosZ(220, 260).TopPosZ(0, 28))
+	ITEM(Label, lblPS, SetLabel(t_("Paper size:")).LeftPosZ(224, 56).TopPosZ(4, 19))
+	ITEM(DropList, cbPS, LeftPosZ(284, 44).TopPosZ(4, 19))
+	ITEM(Switch, radPL, SetLabel(t_("Portrait\nLandscape")).LeftPosZ(336, 140).TopPosZ(4, 20))
+	ITEM(Label, RIGHTLABEL1, HSizePosZ(480, 0).TopPosZ(0, 28))
+END_LAYOUT
+
+LAYOUT(seeditlay, 400, 308)
+	ITEM(Label, lName, SetLabel(t_("Verb or verb-phrase for type of association")).LeftPosZ(4, 252).TopPosZ(92, 19))
+	ITEM(EditString, ebName, HSizePosZ(4, 144).TopPosZ(116, 19))
+	ITEM(Label, lNote, SetLabel(t_("Additional information")).LeftPosZ(4, 252).TopPosZ(140, 19))
+	ITEM(DocEdit, ebNote, HSizePosZ(4, 4).VSizePosZ(160, 48))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).Tip(t_("accept")).RightPosZ(88, 60).BottomPosZ(12, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(12, 60).BottomPosZ(12, 20))
+	ITEM(Label, lfromto, SetFrame(BlackFrame()).HSizePosZ(4, 4).TopPosZ(4, 80))
+END_LAYOUT
+
+LAYOUT(itemlay, 316, 284)
+	ITEM(Label, lblName, SetLabel(t_("Name:")).LeftPosZ(4, 40).TopPosZ(4, 19))
+	ITEM(EditString, ebName, LeftPosZ(48, 240).TopPosZ(4, 19))
+	ITEM(Button, btnSel, SetLabel(t_("..")).SetFont(StdFontZ(11).Bold()).LeftPosZ(292, 16).TopPosZ(4, 19))
+	ITEM(Button, btnX, SetLabel(t_("X")).SetFont(StdFontZ(10)).LeftPosZ(292, 16).TopPosZ(28, 19))
+	ITEM(Label, lblNote, SetLabel(t_("Note:")).LeftPosZ(4, 40).TopPosZ(28, 19))
+	ITEM(DocEdit, ebNote, HSizePosZ(4, 4).VSizePosZ(48, 52))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).RightPosZ(80, 60).BottomPosZ(16, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(12, 60).BottomPosZ(16, 20))
+END_LAYOUT
+
+LAYOUT(selitemlay, 400, 284)
+	ITEM(ArrayCtrl, arItems, HSizePosZ(0, 0).VSizePosZ(0, 52))
+	ITEM(Button, btnShare, SetLabel(t_("Share")).RightPosZ(152, 60).BottomPosZ(16, 20))
+	ITEM(Button, btnDelete, SetLabel(t_("Delete")).LeftPosZ(16, 60).BottomPosZ(16, 20))
+	ITEM(Button, btnCopy, SetLabel(t_("Copy")).RightPosZ(84, 60).BottomPosZ(16, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(16, 60).BottomPosZ(16, 20))
+END_LAYOUT
+

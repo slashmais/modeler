@@ -1,0 +1,13 @@
+LAYOUT(metadlg, 412, 312)
+	ITEM(Label, lblName, SetLabel(t_("Name:")).LeftPosZ(4, 40).TopPosZ(8, 19))
+	ITEM(EditString, dv___1, HSizePosZ(44, 4).TopPosZ(8, 19))
+	ITEM(Label, lblNote, SetLabel(t_("Notes")).LeftPosZ(4, 44).TopPosZ(32, 19))
+	ITEM(DocEdit, dv___3, HSizePosZ(4, 4).VSizePosZ(52, 44))
+	ITEM(Button, btnOK, SetLabel(t_("OK")).RightPosZ(84, 60).BottomPosZ(12, 20))
+	ITEM(Button, btnCancel, SetLabel(t_("Cancel")).RightPosZ(12, 60).BottomPosZ(12, 20))
+END_LAYOUT
+
+LAYOUT(solvlay, 584, 456)
+	ITEM(ArrayCtrl, acProjects, HSizePosZ(4, 4).VSizePosZ(4, 4))
+END_LAYOUT
+
